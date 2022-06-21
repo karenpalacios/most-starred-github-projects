@@ -1,6 +1,6 @@
 <?php
-require 'config/config.php';
-define('APPNAME', 'git2');
+$config = require 'config/config.php';
+define('APPNAME', $config['application']['app_name']);
 define('BASEPATH',  @realpath( dirname (__FILE__).'/../').'/'.APPNAME);
 
 $path = [

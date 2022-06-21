@@ -2,8 +2,8 @@
 
 return [
     'application' => [
-        'BASEPATH' => '/var/www/html/symphonygit/',
-        'APPNAME' => 'git2'
+        'base_path' => '/var/www/html/symphonygit/',
+        'app_name' => 'git2'
     ],    
     'database' => [
         'mysql' => [
