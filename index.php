@@ -12,19 +12,3 @@ require __DIR__ . "/autoload.php";
 Router::get("/", "DisplayController@index");
 
 Router::run();
-
-/*useDisplayController;
-
-require __DIR__ . "/vendor/autoload.php";
-//require __DIR__ . "/routes.php";
-
-// GET example
-Router::get("/", "DisplayController@index");
-
-Router::get("/sync", function () {
-  echo json_encode([
-    "message" => "Test!"
-  ]);
-});
-
-Router::run();*/
