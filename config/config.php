@@ -8,12 +8,11 @@ return [
     'database' => [
         'mysql' => [
             'driver' => 'mysql',
-            'url' => 'DATABASE_URL',
-            'host' => 'DB_HOST', '127.0.0.1',
-            'port' => 'DB_PORT', '3306',
-            'database' => 'DB_DATABASE', 'forge',
-            'username' => 'DB_USERNAME', 'forge',
-            'password' => 'DB_PASSWORD', '',
+            'host' => 'mysql',
+            'port' => '3306',
+            'db' => 'github_repositories',
+            'user' => 'root',
+            'pass' => 'dev',
             'prefix' => ''
         ]
     ],

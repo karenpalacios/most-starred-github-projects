@@ -1,9 +1,13 @@
 <?php
 $config = require 'config/config.php';
-define('APPNAME', $config['application']['app_name']);
+include_once('core/Config.php');
+define('APPNAME', Config::App('app_name'));
 define('BASEPATH',  @realpath( dirname (__FILE__).'/../').'/'.APPNAME);
 
+
 $path = [
+    'core' => 'core',
+    'core' => 'core/database',
     'controller' => 'controllers',
     'model' => 'models',
     'view' => 'views',
