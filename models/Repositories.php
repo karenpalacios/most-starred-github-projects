@@ -3,7 +3,7 @@ include_once('core/Database.php');
 
 class Repositories extends Database{
 
-    function getAll() {
+    public function getAll() {
         try {
             $result = $this->connection->query('SELECT * FROM repositories')->fetchAll();
         } catch (Exception $e) {
@@ -11,6 +11,10 @@ class Repositories extends Database{
         }
         return $result;
     }
+
+    public function save($data) {
+        return $this->insert('repositories',$data);
+    }    
 
     function getById($id) {
      
