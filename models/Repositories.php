@@ -17,7 +17,13 @@ class Repositories extends Database{
     }    
 
     function getById($id) {
-     
+        try {
+            $result = $this->connection->query('SELECT * FROM repositories WHERE id = ?',$id)->fetchAll();
+            $result = $result[0];
+        } catch (Exception $e) {
+            return 'Database exception: ' . $e->getMessage() . PHP_EOL;
+        }
+        return $result;
     }
 
 }
