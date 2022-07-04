@@ -6,13 +6,12 @@ class DisplayController extends BaseController{
     function index() {
 
         $repositories = new Repositories();
-        $data = $repositories->getAll(); 
-        
+        $data = $repositories->getAll();         
         $this->render('main',$data);
     }
 
     function detail($id) {
-        echo 'Repo:' . $id;
+        $this->render('detail',$id);
     }
 
 }

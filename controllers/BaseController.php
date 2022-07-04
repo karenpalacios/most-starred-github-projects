@@ -3,7 +3,7 @@
 class BaseController{
 
     function render($view,$data) {
-        include_once('views/' . $view . '.php');
+        require_once('views/base.php');
     }
 
 }
