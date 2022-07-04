@@ -11,4 +11,8 @@ class DisplayController extends BaseController{
         $this->render('main',$data);
     }
 
+    function detail($id) {
+        echo 'Repo:' . $id;
+    }
+
 }
