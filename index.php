@@ -11,5 +11,6 @@ require __DIR__ . "/autoload.php";
 
 Router::get("/", "DisplayController@index");
 Router::get("/detail/{id}", "DisplayController@detail");
+Router::get("/sync", "SyncController@index");
 
 Router::run();

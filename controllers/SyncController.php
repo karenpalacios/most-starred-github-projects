@@ -22,11 +22,15 @@ class SyncController extends BaseController {
                 'url' => $item->html_url,
                 'created_at' => $item->created_at,
                 'pushed_at' => $item->pushed_at,
-                'description' => $item->description, 
-                'stars' => $item->stargazers_count           
+                'description' => $item->description,
+                'stars' => $item->stargazers_count
             ];
             $repositories->save($data);
         }
+
+        $repositories = new Repositories();
+        $data = $repositories->getAll();
+        $this->render('main',$data);
     }
 
 }

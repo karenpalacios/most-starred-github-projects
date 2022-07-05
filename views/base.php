@@ -52,7 +52,7 @@
                     <div class="col-sm-4 offset-md-1 py-4">
                         <h4 class="text-white">Menu</h4>
                         <ul class="list-unstyled">
-                            <li><a href="#" class="text-white">Synchronize Repositories</a></li>
+                            <li><a href="/sync" class="text-white">Synchronize Repositories</a></li>
                         </ul>
                     </div>
                 </div>
