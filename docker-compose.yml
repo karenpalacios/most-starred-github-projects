@@ -27,6 +27,8 @@ services:
       - MYSQL_DBNAME= git_repositories
     volumes:
       - ./_docker_data/php74/vhost:/etc/apache2/sites-enabled
+      - ./:/var/www/html
+
     ports:
       - 8081:80
       - 8084:443
