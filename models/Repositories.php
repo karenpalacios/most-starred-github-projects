@@ -26,4 +26,8 @@ class Repositories extends Database{
         return $result;
     }
 
+    public function reset() {
+        return $this->truncate('repositories');
+    }
+
 }

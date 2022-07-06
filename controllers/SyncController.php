@@ -11,11 +11,11 @@ class SyncController extends BaseController {
         $result   = json_decode($result);
 
         $repositories = new Repositories();
-
-        // @TODO Truncate table on every sync
+        $repositories->reset();
 
         $i = 0;
         foreach($result->items as $item) {
+            $repository = new Repositories();
             $data = [
                 'repository_id' => $item->id,
                 'name' => $item->name,
@@ -25,10 +25,9 @@ class SyncController extends BaseController {
                 'description' => $item->description,
                 'stars' => $item->stargazers_count
             ];
-            $repositories->save($data);
+            $repository->save($data);
         }
-
-        $repositories = new Repositories();
+        
         $data = $repositories->getAll();
         $this->render('main',$data);
     }
